@@ -11,7 +11,7 @@ theme: /
         a: Привет-привет
 
     state: /weather
-        q!: * (~погода/~температура/~градус) *
+        q!: * (~погода/~температура/~градус/~улица) *
         intent!: /geo
         script:
             var city = $caila.inflect($parseTree._geo, ["nomn"]);
@@ -31,7 +31,7 @@ theme: /
             });
 
     state: /currency
-        q!: * (~курс/~валюта) *
+        q!: * (~курс/~валюта/~деньги) *
         intent!: /currency
         a: Я еще не умею определять курс валют
 
