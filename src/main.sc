@@ -1,6 +1,7 @@
 require: functions.js
 
-  module = sys.zb-common
+
+
 theme: /
 
     state: /hello
@@ -10,7 +11,7 @@ theme: /
         a: Привет-привет
 
     state: /weather
-        q!: * (~погода/~температура/~градус)*
+        q!: * (~погода/~температура/~градус) *
         intent!: /geo
         script:
             var city = $caila.inflect($parseTree._geo, ["nomn"]);
@@ -30,8 +31,9 @@ theme: /
             });
 
     state: /currency
+        q!: * (~курс/~валюта) *
         intent!: /currency
-        a: Я не понял. Вы сказали: {{$request.query}}
+        a: Я еще не умею определять курс валют
 
     state: /NoMatch
         event!: noMatch

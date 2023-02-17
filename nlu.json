@@ -19,13 +19,11 @@
     "path" : "/ geo",
     "enabled" : true,
     "shared" : false,
-    "phrases" : [ {
-      "text" : "@mystem.geo"
-    } ],
+    "phrases" : [ ],
     "classificationRules" : {
       "refs" : [ ]
     },
-    "patterns" : [ ],
+    "patterns" : [ "mystem.geo" ],
     "slots" : [ {
       "name" : "geo",
       "entity" : "mystem.geo",
